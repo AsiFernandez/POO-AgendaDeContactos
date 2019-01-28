@@ -84,15 +84,14 @@ public class Main {
 	 */
 	private static boolean existeContacto(String nombre) {
 		
-		boolean existe = false;
 		for(int i = 0; i< contactos.size(); i++) {
 			if(contactos.get(i).getNombre().equalsIgnoreCase(nombre)) { // equalsIgnoreCase: si pasamos Asier y asier funciona igual, sino no es el mismo nombre
-				existe = true;
+				return true;
 			}else {
-				existe = false;
+				return false;
 			}
 		}
-		return existe;
+		return false;
 	}
 	
 	
@@ -104,7 +103,7 @@ public class Main {
 		
 		Iterator it = contactos.iterator();
 		while(it.hasNext()) {
-			Contacto obj = (Contacto) it.next();
+			Contacto obj =  (Contacto) it.next();
 			System.out.println(obj);
 		}
 		

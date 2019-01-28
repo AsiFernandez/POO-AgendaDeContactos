@@ -128,10 +128,6 @@ public class Main {
 			if( contactos.get(i).getNombre().equalsIgnoreCase(nombre)) {
 				contactos.remove(i);
 				System.out.println("Contacto con el nombre " + nombre + " ha sido eliminado");
-			}else if(contactos.isEmpty()) {
-				System.out.println("La agenda esta vacia");
-			}else {
-				System.out.println("El contacto no existe");
 			}
 		}
 		
